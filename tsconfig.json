@@ -11,13 +11,13 @@
     "lib": [
       "esnext",
       "dom"
-    ]
-  },
-  "baseUrl": "src",
-  "path": {
-    "@/*": [
-      "./src/*"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
   },
   "include": [
     "src/**/*.ts",
