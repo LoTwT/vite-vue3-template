@@ -6,12 +6,12 @@ A template with vite, vue3, typescript, jest.
 
 ### get started
 
-```powershell
+```shell
 git clone https://github.com/LoTwT/vite-vue3-ts-jest.git
 ```
 
 ### run test
 
-```powershell
+```shell
 yarn test
 ```
