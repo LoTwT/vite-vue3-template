@@ -1,19 +1,13 @@
-# vite-vue3-ts-jest
+# vite-vue3-template
 
-A template with vite, vue3, typescript, jest.
+A template uses vite, vue3, typescript...
+
+vue version: `3.2.6`
 
 ## scripts
 
-### get started
-
 ```shell
-git clone https://github.com/LoTwT/vite-vue3-ts-jest.git
+https://github.com/LoTwT/vite-vue3-template.git
 ```
 
-remember reset `.git`
-
-### run test
-
-```shell
-yarn test
-```
+**remember reset `.git`**
