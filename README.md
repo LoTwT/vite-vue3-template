@@ -1,6 +1,6 @@
 # vite-vue3-template
 
-A template uses vite, vue3, typescript...
+A template uses vite, vue3, typescript... :smile:
 
 vue version: `3.2.6`
 
