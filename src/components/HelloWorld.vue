@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from "vue"
 
 defineProps({
   msg: {
     type: String,
     required: true,
   },
-});
-const count = ref(0);
+})
+const count = ref(0)
 </script>
 
 <style scoped>
