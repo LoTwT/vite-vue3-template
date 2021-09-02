@@ -1,12 +1,12 @@
+<script setup lang="ts">
+import HelloWorld from "@/components/HelloWorld.vue"
+</script>
+
 <template>
   <HelloWorld msg="Hello Vue3!" />
 </template>
 
-<script lang="ts" setup>
-import HelloWorld from "@/components/HelloWorld.vue"
-</script>
-
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
