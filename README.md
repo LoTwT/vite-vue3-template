@@ -1,13 +1,3 @@
-# vite-vue3-template
+# yae
 
-A template uses vite, vue3, typescript... :smile:
-
-vue version: `3.2.6`
-
-## scripts
-
-```shell
-https://github.com/LoTwT/vite-vue3-template.git
-```
-
-**remember reset `.git`**
+这个程序员啊，因为没办法写出好代码，气得内心崩溃，又哭又闹，呜呜呜呜，好可怜啊...
