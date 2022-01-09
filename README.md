@@ -1,3 +1,3 @@
-# yae
+# pioneer template
 
-这个程序员啊，因为没办法写出好代码，气得内心崩溃，又哭又闹，呜呜呜呜，好可怜啊...
+vue3-vite-vitest-naiveui
