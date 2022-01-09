@@ -1,13 +1,4 @@
-# vite-vue3-template
+# vue3-template
 
-A template uses vite, vue3, typescript... :smile:
-
-vue version: `3.2.6`
-
-## scripts
-
-```shell
-https://github.com/LoTwT/vite-vue3-template.git
-```
-
-**remember reset `.git`**
+- cms: basic cms template
+- pioneer: template with new features and plugins (for study and for fun)
