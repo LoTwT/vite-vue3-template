@@ -1,5 +1,7 @@
 import { defineConfig, loadEnv } from "vite"
 import vue from "@vitejs/plugin-vue"
+import ViteComponents from "unplugin-vue-components/vite"
+import { AntDesignVueResolver } from "unplugin-vue-components/resolvers"
 import path from "path"
 
 export default defineConfig((config) => {
@@ -13,12 +15,21 @@ export default defineConfig((config) => {
   ) as unknown as ImportMetaEnv
 
   return {
+    plugins: [
+      vue(),
+      ViteComponents({
+        resolvers: [AntDesignVueResolver()],
+        dts: true,
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      }),
+    ],
+
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
       },
     },
-    plugins: [vue()],
+
     server: {
       port: VITE_SERVER_PORT || 3000,
       // 此处默认转换 /api, 未做通用处理...
