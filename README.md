@@ -1,3 +1,3 @@
 # pioneer template
 
-vue3-vite-vitest-naiveui
+ vue3 + vite + vue-router + pinia + ts + ant-design-vue + vitest
