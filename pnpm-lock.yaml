@@ -4,17 +4,21 @@ specifiers:
   "@types/node": ^17.0.10
   "@vitejs/plugin-vue": ^2.0.1
   ant-design-vue: ^3.0.0-beta.7
+  pinia: ^2.0.9
   prettier: ^2.5.1
   typescript: ^4.5.4
   unplugin-vue-components: ^0.17.13
   vite: ^2.7.13
   vitest: ^0.1.24
   vue: ^3.2.27
+  vue-router: ^4.0.12
   vue-tsc: ^0.30.6
 
 dependencies:
   ant-design-vue: 3.0.0-beta.7_vue@3.2.27
+  pinia: 2.0.9_typescript@4.5.4+vue@3.2.27
   vue: 3.2.27
+  vue-router: 4.0.12_vue@3.2.27
 
 devDependencies:
   "@types/node": 17.0.10
@@ -412,6 +416,14 @@ packages:
     dependencies:
       "@vue/compiler-dom": 3.2.27
       "@vue/shared": 3.2.27
+    dev: false
+
+  /@vue/devtools-api/6.0.0-beta.21.1:
+    resolution:
+      {
+        integrity: sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==,
+        tarball: "@vue/devtools-api/download/@vue/devtools-api-6.0.0-beta.21.1.tgz",
+      }
     dev: false
 
   /@vue/reactivity-transform/3.2.27:
@@ -1525,6 +1537,28 @@ packages:
     engines: { node: ">=8.6" }
     dev: true
 
+  /pinia/2.0.9_typescript@4.5.4+vue@3.2.27:
+    resolution:
+      {
+        integrity: sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==,
+        tarball: pinia/download/pinia-2.0.9.tgz,
+      }
+    peerDependencies:
+      "@vue/composition-api": ^1.4.0
+      typescript: ">=4.4.4"
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      "@vue/composition-api":
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      "@vue/devtools-api": 6.0.0-beta.21.1
+      typescript: 4.5.4
+      vue: 3.2.27
+      vue-demi: 0.12.1_vue@3.2.27
+    dev: false
+
   /postcss/8.4.5:
     resolution:
       {
@@ -2210,6 +2244,38 @@ packages:
       vscode-pug-languageservice: 0.30.6
       vscode-typescript-languageservice: 0.30.6
     dev: true
+
+  /vue-demi/0.12.1_vue@3.2.27:
+    resolution:
+      {
+        integrity: sha1-9+GO++z/0RqwadFHLXoG4xm0F0w=,
+        tarball: vue-demi/download/vue-demi-0.12.1.tgz,
+      }
+    engines: { node: ">=12" }
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      "@vue/composition-api": ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      "@vue/composition-api":
+        optional: true
+    dependencies:
+      vue: 3.2.27
+    dev: false
+
+  /vue-router/4.0.12_vue@3.2.27:
+    resolution:
+      {
+        integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==,
+        tarball: vue-router/download/vue-router-4.0.12.tgz,
+      }
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      "@vue/devtools-api": 6.0.0-beta.21.1
+      vue: 3.2.27
+    dev: false
 
   /vue-tsc/0.30.6_typescript@4.5.4:
     resolution:

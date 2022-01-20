@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "ant-design-vue": "^3.0.0-beta.7",
-    "vue": "^3.2.27"
+    "pinia": "^2.0.9",
+    "vue": "^3.2.27",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@types/node": "^17.0.10",

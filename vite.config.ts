@@ -19,7 +19,7 @@ export default defineConfig((config) => {
       vue(),
       ViteComponents({
         resolvers: [AntDesignVueResolver()],
-        dts: "./src/components.d.ts",
+        dts: "./src/component.d.ts",
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
     ],
