@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from "vite"
 import vue from "@vitejs/plugin-vue"
 import ViteComponents from "unplugin-vue-components/vite"
 import { AntDesignVueResolver } from "unplugin-vue-components/resolvers"
+import AutoImport from "unplugin-auto-import/vite"
 import path from "path"
 
 export default defineConfig((config) => {
@@ -19,8 +20,14 @@ export default defineConfig((config) => {
       vue(),
       ViteComponents({
         resolvers: [AntDesignVueResolver()],
-        dts: "./src/component.d.ts",
+        dts: "./src/types/global/component.d.ts",
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      }),
+      AutoImport({
+        dts: './src/types/global/auto-imports.d.ts',
+        imports: ["vue"],
+        include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
+        
       }),
     ],
 
