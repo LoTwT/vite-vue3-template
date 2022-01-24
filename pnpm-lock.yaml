@@ -7,6 +7,7 @@ specifiers:
   pinia: ^2.0.9
   prettier: ^2.5.1
   typescript: ^4.5.4
+  unplugin-auto-import: ^0.5.11
   unplugin-vue-components: ^0.17.13
   vite: ^2.7.13
   vitest: ^0.1.24
@@ -25,6 +26,7 @@ devDependencies:
   "@vitejs/plugin-vue": 2.0.1_vite@2.7.13+vue@3.2.27
   prettier: 2.5.1
   typescript: 4.5.4
+  unplugin-auto-import: 0.5.11_vite@2.7.13
   unplugin-vue-components: 0.17.13_vite@2.7.13+vue@3.2.27
   vite: 2.7.13
   vitest: 0.1.24
@@ -1934,6 +1936,32 @@ packages:
       }
     engines: { node: ">=4.2.0" }
     hasBin: true
+    dev: true
+
+  /unplugin-auto-import/0.5.11_vite@2.7.13:
+    resolution:
+      {
+        integrity: sha512-MJ3POLe/IysRHF4yd32FkKDoxqSRoiuIHm89ys67B8FLuz2Pvh9poeqTVe6IhJsNxwv0+GSdFfj5Dpq24lhm4g==,
+        tarball: unplugin-auto-import/download/unplugin-auto-import-0.5.11.tgz,
+      }
+    engines: { node: ">=14" }
+    peerDependencies:
+      "@vueuse/core": "*"
+    peerDependenciesMeta:
+      "@vueuse/core":
+        optional: true
+    dependencies:
+      "@antfu/utils": 0.4.0
+      "@rollup/pluginutils": 4.1.2
+      local-pkg: 0.4.1
+      magic-string: 0.25.7
+      resolve: 1.21.0
+      unplugin: 0.3.0_vite@2.7.13
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
+      - vite
+      - webpack
     dev: true
 
   /unplugin-vue-components/0.17.13_vite@2.7.13+vue@3.2.27:
