@@ -2,11 +2,11 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module "vue" {
+declare module 'vue' {
   export interface GlobalComponents {
-    AButton: typeof import("ant-design-vue/es")["Button"]
-    HelloWorld: typeof import("./../../components/HelloWorld.vue")["default"]
+    AButton: typeof import('ant-design-vue/es')['Button']
+    HelloWorld: typeof import('./../../components/HelloWorld.vue')['default']
   }
 }
 
-export {}
+export { }

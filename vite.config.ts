@@ -10,10 +10,10 @@ export default defineConfig((config) => {
 
   // .env
   const root = process.cwd()
-  const { VITE_SERVER_PORT, VITE_SERVER_PROXY } = loadEnv(
-    mode,
-    root,
-  ) as unknown as ImportMetaEnv
+  const { VITE_SERVER_PORT, VITE_SERVER_PROXY, VITE_SERVER_PROXY_TARGET } =
+    loadEnv(mode, root) as unknown as ImportMetaEnv
+
+  const hasProxy = VITE_SERVER_PROXY && VITE_SERVER_PROXY_TARGET
 
   return {
     plugins: [
@@ -39,11 +39,11 @@ export default defineConfig((config) => {
     server: {
       port: VITE_SERVER_PORT || 3000,
       // 此处默认转换 /api, 未做通用处理...
-      proxy: VITE_SERVER_PROXY && {
-        "/api": {
-          target: VITE_SERVER_PROXY ?? "",
+      proxy: hasProxy && {
+        [VITE_SERVER_PROXY]: {
+          target: VITE_SERVER_PROXY_TARGET,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
+          rewrite: (path) => path.replace(VITE_SERVER_PROXY, ""),
         },
       },
     },
@@ -56,4 +56,5 @@ export default defineConfig((config) => {
 interface ImportMetaEnv {
   readonly VITE_SERVER_PORT: number
   readonly VITE_SERVER_PROXY: string
+  readonly VITE_SERVER_PROXY_TARGET: string
 }
