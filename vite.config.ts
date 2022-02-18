@@ -18,16 +18,18 @@ export default defineConfig((config) => {
   const hasProxy = !!(VITE_SERVER_PROXY && VITE_SERVER_PROXY_TARGET)
 
   return {
+    base: "/todolist/",
+
     plugins: [
       vue(),
       ViteComponents({
         resolvers: [AntDesignVueResolver()],
-        dts: "./AutoImport.d.ts",
+        dts: "src/types/unplugin/ViteComponent.d.ts",
         include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
       AutoImport({
-        imports: ["vue", "vue-router", "pinia", "@vueuse/core"],
-        dts: "./AutoImport.d.ts",
+        imports: ["vue", "vue-router", "pinia"],
+        dts: "src/types/unplugin/AutoImport.d.ts",
         include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
     ],

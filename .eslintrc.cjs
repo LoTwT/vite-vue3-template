@@ -12,4 +12,7 @@ module.exports = {
   env: {
     "vue/setup-compiler-macros": true,
   },
+  rules: {
+    semi: [2, "off"],
+  },
 }
