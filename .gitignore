@@ -27,4 +27,5 @@ coverage
 *.sln
 *.sw?
 
-unplugin
+ViteComponent.d.ts
+AutoImport.d.ts
